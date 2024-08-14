@@ -128,4 +128,5 @@ SQLite - 가벼운 관계형 DB,서버를 설치할 필요 없이 로컬 파일 
   https://www.naver.com
 
 ![test_404](https://github.com/user-attachments/assets/8e4611db-00a1-483d-a0bd-cbde79beb5e9)
-단축키가 생성이되고 testDB에 저장이 되는데도 404로 리디렉션이 안됨
+
+## 단축키가 생성이되고 testDB에 저장이 되는데도 404로 리디렉션이 안됨
