@@ -72,14 +72,13 @@
 
 ## DB 선택 이유
 
-Postgresql - 뛰어난 신뢰성과 확장성을 제공하고 대규모 DB와 트래픽을 처리하는 데 효과적. 그리고 JSON, 배열, 지리공간 데이터 등 다양한 데이터 타입을 지원하여 유연한 데이터 모델링이 가능하여 short_API 앱에 적용
+Postgresql - 뛰어난 신뢰성과 확장성을 제공하고 대규모 DB와 트래픽을 처리하는 데 효과적. 그리고 JSON, 배열, 지리공간 데이터 등 다양한 데이터 타입을 지원하여 유연한 데이터 모델링이 가능하여 `short_API 앱`에 적용
 
 Redis - 읽기 및 쓰기 성능이 매우 빠름 > 실시간 데이터 처리 및 캐싱에 적합,
 캐싱 용도로 사용하여 DB조회 결과를 캐싱하여 DB의 부하를 줄이고 응답 속도 향상
-조회 수와 같은 자주 액세스 되는 데이터를 저장하는데 적합
+`조회 수`와 같은 자주 액세스 되는 데이터를 저장하는데 적합
 
-SQLite - 가벼운 관계형 DB,서버를 설치할 필요 없이 로컬 파일 시스템에 DB를 저장 > 테스트 및 개발 환경에서 쉽게 사용가능
-테스트 코드 작성에 사용
+SQLite - 가벼운 관계형 DB,서버를 설치할 필요 없이 로컬 파일 시스템에 DB를 저장 > 테스트 및 개발 환경에서 쉽게 사용가능 > `테스트 코드` 작성
 
 ## 실행 방법
 
@@ -87,11 +86,10 @@ SQLite - 가벼운 관계형 DB,서버를 설치할 필요 없이 로컬 파일 
 
    - `.env` 파일에 `SECRET_KEY`, `DATABASE_URL`, `REDIS_URL`을 설정합니다.
 
-     _DB 설정 연결하려는 DB로 변경해야됨_
-     SECRET_KEY=my_secret_key
-     DATABASE_URL=postgresql+psycopg2://ryong:1234@localhost/mydatabase
-
-   REDIS_URL=redis://localhost:6379/0
+     - _DB 설정 연결하려는 DB로 변경해야됨_
+     - SECRET_KEY=my_secret_key
+     - DATABASE_URL=postgresql+psycopg2://ryong:1234@localhost/mydatabase
+     - REDIS_URL=redis://localhost:6379/0
 
 2. **라이브러리 설치**:
 
@@ -101,26 +99,26 @@ SQLite - 가벼운 관계형 DB,서버를 설치할 필요 없이 로컬 파일 
 
 3. **실행**:
 
-   - 레디스 서버 실행
-     redis-server
+   - 레디스 서버 실행:
+     `redis-server`
 
-   - FastAPI 서버 실행
-     uvicorn app.short_API:app --reload --port 8700
+   - FastAPI 서버 실행:
+     `uvicorn app.short_API:app --reload --port 8700`
 
 ## 테스트 코드 에러
 
 단축 URL을 통해 원래 URL로 리디렉션하는 과정에서 404코드 에러
 
-# 리디렉션 테스트
+- 리디렉션 테스트
 
-test_redirect_url - assert 404 == 301
+`test_redirect_url - assert 404 == 301`
 
-# 만료된 URL 처리 테스트
+- 만료된 URL 처리 테스트
 
-test_url_expiry - assert 404 == 301
+`test_url_expiry - assert 404 == 301`
 
-test 코드에 원본 url 문제인지 확인
-http://example.com
+- test 코드에 원본 url 문제인지 확인
+  http://example.com
 
 > > https://www.naver.com
 > > 실제 연결이 가능한 url 수정 DB확인
