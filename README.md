@@ -3,7 +3,7 @@
 # 개요
 
 이 프로젝트는 FastAPI를 사용하여 URL 단축 서비스를 구현한 것입니다. 사용자는 긴 URL을 고유한 단축 키로 변환하고, 이 단축 키를 통해 원본 URL로 리디렉션할 수 있습니다. 또한, URL 만료 기능과 단축 URL의 조회 수를 추적하는 기능도 지원합니다.
-![test_naver](https://github.com/user-attachments/assets/9346b72c-dc0f-436e-bfe7-3e0407b45c39)
+
 
 ## 기능
 
@@ -23,6 +23,7 @@
        "short_url": "<shortened_url>"
      }
      ```
+  ![short키생성](https://github.com/user-attachments/assets/c27a3913-84d5-4a6c-b259-738c09e1cfef)
 
 2. **URL 리디렉션**:
 
@@ -30,6 +31,7 @@
    - **응답**:
      - `301 Moved Permanently`: 단축 키가 유효할 경우
      - `404 Not Found`: 단축 키가 존재하지 않거나 만료된 경우
+   ![test_naver](https://github.com/user-attachments/assets/9346b72c-dc0f-436e-bfe7-3e0407b45c39)
 
 3. **URL 통계**:
    - **엔드포인트**: `GET /stats/{short_key}/`
@@ -40,6 +42,7 @@
        "hits": <number_of_accesses>
      }
      ```
+  ![조회수](https://github.com/user-attachments/assets/f30c1497-38e5-4995-9a46-708c9e58dd91)
 
 ### 단축 키 생성
 
