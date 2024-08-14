@@ -3,6 +3,7 @@
 # 개요
 
 이 프로젝트는 FastAPI를 사용하여 URL 단축 서비스를 구현한 것입니다. 사용자는 긴 URL을 고유한 단축 키로 변환하고, 이 단축 키를 통해 원본 URL로 리디렉션할 수 있습니다. 또한, URL 만료 기능과 단축 URL의 조회 수를 추적하는 기능도 지원합니다.
+![test_naver](https://github.com/user-attachments/assets/9346b72c-dc0f-436e-bfe7-3e0407b45c39)
 
 ## 기능
 
@@ -108,6 +109,7 @@ SQLite - 가벼운 관계형 DB,서버를 설치할 필요 없이 로컬 파일 
 ## 테스트 코드 에러
 
 단축 URL을 통해 원래 URL로 리디렉션하는 과정에서 404코드 에러
+![test_404](https://github.com/user-attachments/assets/8e4611db-00a1-483d-a0bd-cbde79beb5e9)
 
 - 리디렉션 테스트
 
